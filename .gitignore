@@ -1,0 +1,5 @@
+buildkit-*.tar.*	
+clog
+buildkit-*/
+.build*.log
+**.rpm
