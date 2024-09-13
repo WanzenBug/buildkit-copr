@@ -6,7 +6,7 @@ DEBIAN_SOURCES := $(wildcard debian/**)
 export DEBEMAIL = $(shell git show --format="%aE" -s HEAD)
 export DEBFULLNAME = $(shell git show --format="%aN" -s HEAD)
 
-debbuild: buildkit_$(VERSION).orig.tar.gz debian/changelog
+debbuild: buildkit_$(VERSION).orig.tar.gz
 	rm -rf ./buildkit-$(VERSION)/
 	tar -xf buildkit_$(VERSION).orig.tar.gz
 	cp -rL ./debian ./buildkit-$(VERSION)/

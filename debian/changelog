@@ -1,3 +1,9 @@
+buildkit (0.16.0-3~ppa1~ubuntu22.04) jammy; urgency=medium
+
+  * fix sysusers
+
+ -- Moritz "WanzenBug" Wanzenböck <moritz@wanzenbug.xyz>  Fri, 13 Sep 2024 14:35:52 +0200
+
 buildkit (0.16.0-2~ppa1~ubuntu22.04) jammy; urgency=medium
 
   [ Moritz "WanzenBug" Wanzenböck ]
