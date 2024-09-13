@@ -8,3 +8,4 @@ Documentation=https://github.com/moby/buildkit
 [Service]
 Type=notify
 ExecStart=/usr/bin/buildkitd --addr fd://
+Group=buildkit

@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+PKG        := github.com/moby/buildkit
+GO_LDFLAGS += -X $(PKG)/version.Version=$(DEB_VERSION_UPSTREAM)
+GO_LDFLAGS += -X $(PKG)/version.Revision=$(DEB_VERSION)
+
+EXCLUDES += examples
+EXCLUDES += vendor
+EXCLUDES += docs
+EXCLUDES += frontend/dockerfile/parser/dumper
+EXCLUDES += frontend/dockerfile/cmd/dockerfile-frontend
+
+export PATH := /usr/lib/go-1.21/bin:$(PATH)
+export DH_GOLANG_INSTALL_ALL := 1
+export DH_GOLANG_EXCLUDES := $(EXCLUDES)
+
+%:
+	dh $@ --buildsystem=golang --with=golang --builddirectory=_build
+
+override_dh_auto_build:
+	dh_auto_build -- -ldflags '$(GO_LDFLAGS)'
+
+override_dh_auto_test:
+	# Disable, as the tests need elevated privileges, and we don't want that
+
+override_dh_install:
+	dh_install
+	# the below step is automatic with debhelper >= 14
+	dh_installsysusers

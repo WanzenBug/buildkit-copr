@@ -1,0 +1,21 @@
+Source: buildkit
+Section: admin
+Priority: optional
+Maintainer: Moritz Wanzenböck <moritz@wanzenbug.xyz>
+Build-Depends: debhelper (>=11~),
+               dh-golang,
+               golang-1.21-go
+Standards-Version: 4.1.4
+Homepage: https://github.com/moby/buildkit
+XS-Go-Import-Path: github.com/moby/buildkit
+
+Package: buildkit
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: containernetwork-plugins,
+            containerd | containerd.io
+Built-Using: ${misc:Built-Using}
+Description: concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit
+ BuildKit is a toolkit for converting source code to build artifacts in an
+ efficient, expressive and repeatable manner.

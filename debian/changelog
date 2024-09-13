@@ -1,0 +1,7 @@
+buildkit (0.16.0-1~ppa1) jammy; urgency=medium
+
+  [ Moritz "WanzenBug" Wanzenböck ]
+  * initial commit
+  * add debian build
+
+ -- Moritz "WanzenBug" Wanzenböck <moritz@wanzenbug.xyz>  Fri, 13 Sep 2024 11:09:02 +0200

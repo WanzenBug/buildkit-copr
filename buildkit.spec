@@ -28,9 +28,12 @@ Source1:        go-vendor-tools.toml
 Source2:        buildkit.service
 Source3:        buildkit.socket
 Source4:        buildkitd.toml
+Source5:        buildkit.sysusers
 
 BuildRequires:  go-vendor-tools
 BuildRequires:  systemd-rpm-macros
+%{?sysusers_requires_compat}
+
 Recommends:     containernetworking-plugins
 Recommends:     containerd
 
@@ -58,6 +61,10 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 install -Dpm 0644 %{S:2} -t %{buildroot}%{_unitdir}
 install -Dpm 0644 %{S:3} -t %{buildroot}%{_unitdir}
 install -Dpm 0644 %{S:4} %{buildroot}%{_sysconfdir}/buildkit/buildkitd.toml
+install -p -D -m 0644 %{S:5} %{buildroot}%{_sysusersdir}/buildkit.conf
+
+%pre
+%sysusers_create_compat %{S:5}
 
 %if %{with check}
 %check
@@ -72,6 +79,7 @@ install -Dpm 0644 %{S:4} %{buildroot}%{_sysconfdir}/buildkit/buildkitd.toml
 %config(noreplace) %{_sysconfdir}/buildkit/buildkitd.toml
 %{_unitdir}/buildkit.service
 %{_unitdir}/buildkit.socket
+%{_sysusersdir}/buildkit.conf
 
 %changelog
 %autochangelog

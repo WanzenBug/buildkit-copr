@@ -1,5 +1,11 @@
-buildkit-*.tar.*	
+# Source
+buildkit*.tar.*
+
+# fedpkg artifacts
 clog
 buildkit-*/
 .build*.log
 **.rpm
+
+# debuild artifacts
+buildkit_*
