@@ -4,12 +4,12 @@ VERSION ?= $(shell rpmspec -q --srpm --queryformat='%{version}' ./buildkit.spec)
 DEBIAN_SOURCES := $(wildcard debian/**)
 
 export DEBEMAIL = $(shell git show --format="%aE" -s HEAD)
-export DEBAUTHOR = $(shell git show --format="%aN" -s HEAD)
+export DEBFULLNAME = $(shell git show --format="%aN" -s HEAD)
 
 debbuild: buildkit_$(VERSION).orig.tar.gz debian/changelog
 	rm -rf ./buildkit-$(VERSION)/
 	tar -xf buildkit_$(VERSION).orig.tar.gz
-	cp -a ./debian ./buildkit-$(VERSION)/
+	cp -rL ./debian ./buildkit-$(VERSION)/
 
 .PHONY: debian/changelog
 debian/changelog:
