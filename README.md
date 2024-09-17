@@ -13,7 +13,9 @@ $ sudo systemctl enable buildkit.socket
 ## Ubuntu
 
 ```
-
+$ sudo apt-add-repository ppa:wanzenbug/buildkit
+...
+$ sudo apt-get install buildkit
 ```
 
 ### Development
