@@ -1,3 +1,9 @@
+buildkit (0.17.0~rc1-1~ppa1~ubuntu22.04) jammy; urgency=medium
+
+  * upstream release v0.17.0-rc1
+
+ -- Moritz "WanzenBug" Wanzenböck <moritz@wanzenbug.xyz>  Wed, 9 Oct 2024 08:37:32 +0200
+
 buildkit (0.16.0-3~ppa1~ubuntu22.04) jammy; urgency=medium
 
   * fix sysusers
