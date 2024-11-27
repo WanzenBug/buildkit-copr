@@ -7,8 +7,8 @@
 
 # https://github.com/moby/buildkit
 %global goipath         github.com/moby/buildkit
-%global tag             v0.17.2
-Version:                0.17.2
+%global tag             v0.18.0
+Version:                0.18.0
 
 %gometa -L -f
 
@@ -44,7 +44,7 @@ Recommends:     containerd
 
 %prep
 %goprep -A -k
-%autopatch -p1
+%autopatch -p1 -q
 
 %generate_buildrequires
 %go_vendor_license_buildrequires -c %{S:1}
