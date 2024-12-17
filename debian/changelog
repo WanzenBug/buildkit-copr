@@ -1,3 +1,9 @@
+buildkit (0.18.2-1~ppa1~ubuntu22.04) jammy; urgency=medium
+
+  * upstream release: v0.18.2
+
+ -- Moritz Wanzenböck <moritz@wanzenbug.xyz>  Tue, 17 Dec 2024 12:29:46 +0100
+
 buildkit (0.18.0-1~ppa1~ubuntu22.04) jammy; urgency=medium
 
   * upstream release: v0.18.1
