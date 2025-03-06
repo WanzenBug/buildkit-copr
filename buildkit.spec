@@ -44,7 +44,8 @@ Recommends:     containerd
 
 %prep
 %goprep -A -k
-%autopatch -p1 -q
+# Currently no patches
+# %autopatch -p1
 
 %generate_buildrequires
 %go_vendor_license_buildrequires -c %{S:1}
