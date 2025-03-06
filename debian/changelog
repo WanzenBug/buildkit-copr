@@ -1,5 +1,11 @@
 buildkit (0.20.0-1~ppa1~ubuntu22.04) jammy; urgency=medium
 
+  * upstream release v0.20.1
+
+ -- Moritz Wanzenböck <moritz@wanzenbug.xyz>  Thu, 06 Mar 2025 08:24:20 +0100
+
+buildkit (0.20.0-1~ppa1~ubuntu22.04) jammy; urgency=medium
+
   * upstream release v0.20.0
 
  -- Moritz Wanzenböck <moritz@wanzenbug.xyz>  Fri, 21 Feb 2025 14:28:34 +0100
