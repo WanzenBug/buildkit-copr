@@ -1,19 +1,10 @@
 [licensing]
 detector = "askalono"
 
+[licensing.detector_config]
+multiple = "true"
+
 [[licensing.licenses]]
-path = "vendor/github.com/spdx/tools-golang/LICENSE.code"
-sha256sum = "e914fb1f3927226e04b0438e0b541b3c6e3c65de4d64aa8f5cdaa803f05448fd"
-expression = "Apache-2.0"
-[[licensing.licenses]]
-path = "vendor/gopkg.in/yaml.v3/LICENSE"
-sha256sum = "d18f6323b71b0b768bb5e9616e36da390fbd39369a81807cca352de4e4e6aa0b"
-expression = "Apache-2.0"
-[[licensing.licenses]]
-path = "vendor/kernel.org/pub/linux/libs/security/libcap/psx/License"
-sha256sum = "279fa656c62857d42952b86a0789b98669ca1cb4b324a8d9e91397c174af4c14"
-expression = "GPL-2.0-only"
-[[licensing.licenses]]
-path = "vendor/kernel.org/pub/linux/libs/security/libcap/cap/License"
-sha256sum = "18eb30b662ed0abeef6ad6ded90a99b30332418d2f71e63dcb4646bbb23b9acc"
-expression = "GPL-2.0-only"
+path = "vendor/github.com/felixge/fgprof/LICENSE.txt"
+sha256sum = "5dbe91d8ef47ef84cc1272dbbed96acd483e592f15fff64afc8b035776a4a9d3"
+expression = "MIT"

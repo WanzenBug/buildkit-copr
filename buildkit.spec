@@ -7,8 +7,8 @@
 
 # https://github.com/moby/buildkit
 %global goipath         github.com/moby/buildkit
-%global tag             v0.20.2
-Version:                0.20.2
+%global tag             v0.21.0
+Version:                0.21.0
 
 %gometa -L -f
 
@@ -22,7 +22,7 @@ Name:           buildkit
 Release:        %autorelease
 Summary:        Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit
 
-License:        Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC-BY-4.0 AND CC-BY-SA-4.0 AND GPL-2.0-only AND ISC AND MIT AND MPL-2.0
+License:        Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND BSD-3-Clause-HP AND GPL-2.0-only AND ISC AND MIT AND MPL-2.0
 URL:            %{gourl}
 Source0:        %{gosource}
 Source1:        go-vendor-tools.toml
@@ -44,8 +44,7 @@ Recommends:     containerd
 
 %prep
 %goprep -A -k
-# Currently no patches
-# %autopatch -p1
+%autopatch -p1 -q
 
 %generate_buildrequires
 %go_vendor_license_buildrequires -c %{S:1}
