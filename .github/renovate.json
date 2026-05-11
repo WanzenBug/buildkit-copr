@@ -13,7 +13,7 @@
     {
       "customType": "regex",
       "fileMatch": ["\\.spec$"],
-      "matchStrings": ["^Version:\\s+(?<currentValue>[^\\s]+)"],
+      "matchStrings": ["Version:\\s+(?<currentValue>[^\\s]+)"],
       "depNameTemplate": "moby/buildkit",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.*)$"
