@@ -15,7 +15,8 @@
       "fileMatch": ["\\.spec$"],
       "matchStrings": ["^Version:\\s+(?<currentValue>[^\\s]+)"],
       "depNameTemplate": "moby/buildkit",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ]
 }
