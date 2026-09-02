@@ -7,8 +7,8 @@
 
 # https://github.com/moby/buildkit
 %global goipath         github.com/moby/buildkit
-%global tag             v0.32.2
-Version:                0.32.2
+%global tag             v0.33.0
+Version:                0.33.0
 
 %gometa -L -f
 
